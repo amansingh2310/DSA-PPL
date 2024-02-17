@@ -9,8 +9,7 @@ int main()
     int k = 1;
     while(k <= n) {
       int temp = k;
-      
-      int sum=0, temp2=temp;
+      int sum=0;
       while(temp) {
       int p = temp %10;
       int fact = 1, i = 1;
@@ -21,7 +20,7 @@ int main()
       sum += fact;
       temp = temp/10;
       }
-      if(sum == temp2) {
+      if(sum == k) {
         cout<<sum<<" ";
       }
       k++;
