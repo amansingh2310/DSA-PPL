@@ -1,26 +1,24 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 int main() 
 {
-    int n, x;
+    int n, x, i, j;
     cin>>n>>x;
     
-    double sum = 0.0;
-    for(int i=0; i<n; i++) {
-      int num;
-      for(int j=0; j<=i; j++){
-        num = pow(x,j);
+    double ans = 0;
+    for(i=0; i<=n; i++) {
+      double prod = 1;
+      for(j=1; j<=i; j++) {
+        prod *= x;
       }
-      double fact = 1.0;
-      for(int j=1; j<=i; j++){
+      double fact = 1;
+      for(j=1; j<=i; j++) {
         fact *= j;
       }
-      
-      sum = sum + (num/fact);
+      ans += prod/fact;
     }
-    cout<<sum;
+    cout<<ans;
 
     return 0;
 }
