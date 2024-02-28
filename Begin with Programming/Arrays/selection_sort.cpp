@@ -14,6 +14,7 @@ int main()
     }
     
     for(int i=0; i<size; i++) {
+        // for finding min element in (i...N-1) & swap it with arr[i]
       int min = INT_MAX, idx;
       for(int j=i; j<size; j++) {
         if(arr[j]<min) {
