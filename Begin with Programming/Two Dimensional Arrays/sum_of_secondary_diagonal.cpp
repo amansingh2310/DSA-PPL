@@ -21,10 +21,6 @@ int main()
       sum += arr[i++][j--];
     }
     
-    // for(int i=0; i<n; i++) {
-    //   sum += arr[i][i];
-    // }
-    
     cout<<sum;
     
     return 0;
