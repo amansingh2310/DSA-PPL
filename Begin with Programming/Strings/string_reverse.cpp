@@ -3,25 +3,28 @@ using namespace std;
 
 int main() 
 {
-    char word[101] = "My name is Aman.";
-    char vowel[101] = "AEIOUaeiou";
-    int v_count = 0;
+    char word[100] = "C++ Online Complier Aman5";
     
+    int word_len = 0;
     for(int i=0; word[i] != '\0'; i++) {
-      for(int j=0; vowel[j] != '\0'; j++) {
-        if(word[i] == vowel[j]) {
-          v_count++;
-        }
-      }
+      word_len++;
     }
+    // cout<<word_len<<endl;
     
-    // for(int i=0; word[i] != '\0'; i++) {
-    //   if(word[i] == 'A' || word[i] == 'E' || word[i] == 'I' || word[i] == 'O' || word[i] == 'U' || word[i] == 'a' || word[i] == 'e' || word[i] == 'i' || word[i] == 'o' || word[i] == 'u') {
-    //     v_count++;
-    //   }
+    // for(int i=word_len-1; i>=0 ; i--) {
+    //   cout<<word[i];
     // }
     
-    cout<<v_count;
+    int i=0, j=word_len-1;
+    while(i<j) {
+      char temp = word[i];
+      word[i] = word[j];
+      word[j] = temp;
+      
+      i++;
+      j--;
+    }
     
+    cout<<word;
     return 0;
 }
