@@ -3,7 +3,7 @@ using namespace std;
 
 int main() 
 {
-    char word[100] = "fsNHFOnlndFf";
+    char word[100] = "fsNHFOnlndFfS";
     
     int w_len=0;
     for(int i=0; word[i] != '\0'; i++) {
@@ -12,7 +12,15 @@ int main()
     
     // cout<<w_len<<endl;
     
-    
+    for(int i=1; i<w_len; i++)  {
+      for(int j=i; j>=0; j--) {
+        if(word[j] < word[j-1]) {
+          char temp = word[j];
+          word[j] = word[j-1];
+          word[j-1] = temp;
+        }
+      }
+    }
     
     cout<<word;
     
