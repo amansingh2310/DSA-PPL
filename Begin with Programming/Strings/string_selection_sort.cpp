@@ -11,6 +11,8 @@ int main()
     }
     
     // cout<<w_len<<endl;
+
+    //can be used word[i] != '\0' instead of w_len
     
     for(int i=0; i<w_len; i++) {
       int min_value = 300, min_index = -1;

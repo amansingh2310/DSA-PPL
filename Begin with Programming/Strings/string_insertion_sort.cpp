@@ -5,14 +5,14 @@ int main()
 {
     char word[100] = "fsNHFOnlndFfS";
     
-    int w_len=0;
-    for(int i=0; word[i] != '\0'; i++) {
-      w_len++;
-    }
+    // int w_len=0;
+    // for(int i=0; word[i] != '\0'; i++) {
+    //   w_len++;
+    // }
     
     // cout<<w_len<<endl;
     
-    for(int i=1; i<w_len; i++)  {
+    for(int i=1; word[i] != '\0'; i++)  {
       for(int j=i; j>=0; j--) {
         if(word[j] < word[j-1]) {
           char temp = word[j];

@@ -11,6 +11,8 @@ int main()
     }
     
     // cout<<w_len<<endl;
+
+    //can be used word[i] != '\0' instead of w_len
     
     for(int j=0; j<w_len-1; j++) {
       for(int i=0; i<w_len-j-1; i++) {
