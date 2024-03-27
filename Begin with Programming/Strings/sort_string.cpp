@@ -25,10 +25,4 @@ int main()
     cout<<word;
     
     return 0;
-
-
-
-
-
-
 }
